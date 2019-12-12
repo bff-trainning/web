@@ -1,5 +1,9 @@
 kind: pipeline
-name: default
+name: WebCI
+
+
+
+
 
 steps:
 - name: publish
@@ -17,6 +21,28 @@ steps:
   - docker build -t mobile20dockerhub.azurecr.cn/training-bff-web .
   - docker push mobile20dockerhub.azurecr.cn/training-bff-web
 
+
+- name: deploy
+  image: appleboy/drone-ssh
+  environment:
+    SSH_HOST:
+      from_secret: ssh_host
+    SSH_USER:
+      from_secret: ssh_user
+    SSH_PASSWORD:
+      from_secret: ssh_password
+  settings:
+    host: $SSH_HOST
+    username: $SSH_USER
+    password: $SSH_PASSWORD
+    port: 22
+    script:
+      - echo hello
+      - echo world
+      - docker images
+
+
+  
 
 
 volumes:

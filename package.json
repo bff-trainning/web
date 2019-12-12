@@ -4,6 +4,7 @@
   "description": "",
   "main": "main.ts",
   "scripts": {
+    "test": "",
     "build": "tsc -p tsconfig.json",
     "run": "ts-node src/main.ts",
     "start": "tsc -p tsconfig.json && node dist/main.js",
