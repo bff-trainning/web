@@ -24,17 +24,13 @@ steps:
 
 - name: deploy
   image: appleboy/drone-ssh
-  environment:
-    SSH_HOST:
-      from_secret: ssh_host
-    SSH_USER:
-      from_secret: ssh_user
-    SSH_PASSWORD:
-      from_secret: ssh_password
   settings:
-    host: 52.130.87.235
-    username: $SSH_USER
-    password: $SSH_PASSWORD
+    host: 
+      from_secret: ssh_host
+    username: 
+      from_secret: ssh_user
+    password: 
+      from_secret: ssh_password
     port: 22
     script:
       - echo hello
