@@ -5,6 +5,7 @@ steps:
 - name: test
   image: node:12
   commands: 
+  - npm install
   - npm run test
   - npm run test:cov
   - npm run test:e2e
