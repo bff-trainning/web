@@ -17,9 +17,10 @@ steps:
   - name: dockersock
     path: /var/run/docker.sock
   commands:
+  - echo $DRONE_TAG
   - docker login mobile20dockerhub.azurecr.cn -u $DOCKER_USER -p $DOCKER_PASSWORD
-  - docker build -t mobile20dockerhub.azurecr.cn/training-bff-web:$$DRONE_TAG .
-  - docker push mobile20dockerhub.azurecr.cn/training-bff-web:$$DRONE_TAG
+  - docker build -t mobile20dockerhub.azurecr.cn/training-bff-web:$DRONE_TAG .
+  - docker push mobile20dockerhub.azurecr.cn/training-bff-web:$DRONE_TAG
 
 
 - name: deploy
@@ -33,7 +34,7 @@ steps:
       from_secret: ssh_password
     port: 22
     script:
-      - docker service update --image mobile20dockerhub.azurecr.cn/training-bff-web:$$DRONE_TAG trainning-web
+      - docker service update --image mobile20dockerhub.azurecr.cn/training-bff-web:$DRONE_TAG trainning-web
 
 
   
