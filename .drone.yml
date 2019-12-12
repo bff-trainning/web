@@ -2,6 +2,13 @@ kind: pipeline
 name: WebCI
 
 steps:
+- name: test
+  image: node:12
+  commands: 
+  - npm run test
+  - npm run test:cov
+  - npm run test:e2e
+
 - name: publish
   image: docker:dind
   environment:
