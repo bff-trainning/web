@@ -32,5 +32,5 @@ router.post("/api/news2", async ctx => {
 
 app.use(router.routes());
 app.use(router.allowedMethods());
-app.listen(8081);
+app.listen(80);
 console.log("Server running on port 8081");
