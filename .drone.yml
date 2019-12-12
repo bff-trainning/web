@@ -18,8 +18,8 @@ steps:
   - name: dockersock
     path: /var/run/docker.sock
   commands:
+  - env
   - echo ${DRONE_BUILD_NUMBER}
-  - echo ${DRONE_TAG}
   - docker login mobile20dockerhub.azurecr.cn -u $DOCKER_USER -p $DOCKER_PASSWORD
   - docker build -t mobile20dockerhub.azurecr.cn/training-bff-web:${DRONE_BUILD_NUMBER} .
   - docker push mobile20dockerhub.azurecr.cn/training-bff-web:${DRONE_BUILD_NUMBER}
