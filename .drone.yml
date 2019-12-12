@@ -1,10 +1,29 @@
 kind: pipeline
-type: docker
 name: default
 
 steps:
-- name: build
-  image: golang
+- name: test
+  image: docker:dind
+  environment:
+    DOCKER_USER:
+      from_secret: docker_user
+    DOCKER_PASSWORD:
+      from_secret: docker_password
+  volumes:
+  - name: dockersock
+    path: /var/run/docker.sock
   commands:
-  - go build
-  - go test
+  - docker images
+  - echo $DOCKER_USER
+  - echo $DOCKER_PASSWORD
+  - docker login mobile20dockerhub.azurecr.cn -u $DOCKER_USER -p $DOCKER_PASSWORD
+  - ls
+  - docker build -t mobile20dockerhub.azurecr.cn/training-bff-web .
+
+
+
+volumes:
+- name: dockersock
+  host:
+    path: /var/run/docker.sock
+
