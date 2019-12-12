@@ -9,6 +9,7 @@ steps:
 - name: publish
   image: docker:dind
   environment:
+    DRONE_TAG: 
     DOCKER_USER:
       from_secret: docker_user
     DOCKER_PASSWORD:
