@@ -2,7 +2,7 @@ kind: pipeline
 name: default
 
 steps:
-- name: test
+- name: publish
   image: docker:dind
   environment:
     DOCKER_USER:
@@ -13,12 +13,9 @@ steps:
   - name: dockersock
     path: /var/run/docker.sock
   commands:
-  - docker images
-  - echo $DOCKER_USER
-  - echo $DOCKER_PASSWORD
   - docker login mobile20dockerhub.azurecr.cn -u $DOCKER_USER -p $DOCKER_PASSWORD
-  - ls
   - docker build -t mobile20dockerhub.azurecr.cn/training-bff-web .
+  - docker push mobile20dockerhub.azurecr.cn/training-bff-web
 
 
 
