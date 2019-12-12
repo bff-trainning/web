@@ -9,11 +9,14 @@ const router = new Router();
 
 const service = new Service();
 
+router.get("/",async ctx =>{
+  ctx.body = "hello";
+});
+
 router.get("/api/news", async ctx => {
   const usid = ctx.request.headers["x-usid"]
   const query = ctx.request.querystring;
 
-  
   console.log(ctx.request);
   const p_news =await service.getNews(usid);
   const p_services = await service.getServiceDiscover(query);
@@ -30,7 +33,9 @@ router.post("/api/news2", async ctx => {
 });
 
 
+
+
 app.use(router.routes());
 app.use(router.allowedMethods());
 app.listen(80);
-console.log("Server running on port 8081");
+console.log("Server running on port 80");
