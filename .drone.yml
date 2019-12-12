@@ -1,10 +1,6 @@
 kind: pipeline
 name: WebCI
 
-
-
-
-
 steps:
 - name: publish
   image: docker:dind
@@ -24,7 +20,6 @@ steps:
   - docker build -t mobile20dockerhub.azurecr.cn/training-bff-web:${DRONE_BUILD_NUMBER} .
   - docker push mobile20dockerhub.azurecr.cn/training-bff-web:${DRONE_BUILD_NUMBER}
 
-
 - name: deploy
   image: appleboy/drone-ssh
   settings:
@@ -37,10 +32,6 @@ steps:
     port: 22
     script:
       - docker service update --image mobile20dockerhub.azurecr.cn/training-bff-web:${DRONE_BUILD_NUMBER} trainning-web
-
-
-  
-
 
 volumes:
 - name: dockersock
