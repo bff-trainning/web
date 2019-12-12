@@ -33,9 +33,7 @@ steps:
       from_secret: ssh_password
     port: 22
     script:
-      - echo hello
-      - echo world
-      - docker images
+      - docker service update --image mobile20dockerhub.azurecr.cn/training-bff-web trainning-web
 
 
   
