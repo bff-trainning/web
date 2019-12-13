@@ -27,8 +27,8 @@ router.get("/api/news", async ctx => {
   const usid = ctx.request.headers["x-usid"];
   const query = ctx.request.querystring;
   console.log(ctx.request);
-  const p_news = await service.getNews(usid);
-  const p_services = await service.getServiceDiscover(query);
+  const p_news =  service.getNews(usid);
+  const p_services =  service.getServiceDiscover(query);
   const [news, services] = await Promise.all([p_news, p_services]);
   ctx.body = { news: news, discoverServices: services };
 });
