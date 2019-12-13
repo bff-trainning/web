@@ -1,5 +1,5 @@
 
-@Host=http://localhost:8081
+@Host=http://localhost
 GET {{Host}}/api/news?region=cn&locale=zh-cn&client=IOS&brand=1
 x-usid: 05e4c12d-2182-4862-928a-a08cc79a5dec
 
@@ -7,6 +7,7 @@ x-usid: 05e4c12d-2182-4862-928a-a08cc79a5dec
 ###
 POST {{Host}}/api/news2
 x-usid: 05e4c12d-2182-4862-928a-a08cc79a5dec
+Content-Type: application/json
 
 {
     "name":"sss"

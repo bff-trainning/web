@@ -1,5 +1,6 @@
 import Koa from "koa";
 import Router from "koa-router";
+import bodyparser from 'koa-bodyparser';
 import { Service } from "./service";
 import { config } from "./configuration";
 
@@ -34,11 +35,10 @@ router.get("/api/news", async ctx => {
 });
 
 router.post("/api/news2", async ctx => {
-  console.log(ctx.request.ctx.body);
-  console.log(ctx.body);
+  console.log(ctx.request.body);
 });
 
-
+app.use(bodyparser({strict: false}));
 app.use(router.routes());
 app.use(router.allowedMethods());
 app.listen(80);
