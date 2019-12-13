@@ -2,7 +2,6 @@ import Koa from "koa";
 import Router from "koa-router";
 import bodyparser from 'koa-bodyparser';
 import { Service } from "./service";
-import { config } from "./configuration";
 
 // import { map } from "rxjs/operators";
 // import { async } from "rxjs/internal/scheduler/async";
@@ -36,6 +35,7 @@ router.get("/api/news", async ctx => {
 
 router.post("/api/news2", async ctx => {
   console.log(ctx.request.body);
+    ctx.status = 200;
 });
 
 app.use(bodyparser({strict: false}));

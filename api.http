@@ -1,5 +1,6 @@
 
 @Host=http://localhost
+#@Host=http://40.73.72.89:8080
 GET {{Host}}/api/news?region=cn&locale=zh-cn&client=IOS&brand=1
 x-usid: 05e4c12d-2182-4862-928a-a08cc79a5dec
 
