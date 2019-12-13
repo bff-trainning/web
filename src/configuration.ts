@@ -2,10 +2,12 @@ import * as env from "dotenv";
 interface Config {
   Environment: string;
   NewSBaseUrl: string;
-  DiscoverService_URL:string;
+  DiscoverService_URL: string;
 }
 
-env.config();
+if (process.env.CURRENT_ENV !== "production") {
+  env.config();
+}
 
 export const config: Config = {
   Environment: process.env.CURRENT_ENV,

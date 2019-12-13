@@ -12,5 +12,5 @@ COPY . .
 RUN npm run-script build
 
 # Start server
-EXPOSE 80
+EXPOSE 80 12333
 CMD ["node", "dist/main.js"]
