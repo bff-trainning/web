@@ -1,24 +1,24 @@
 ---
 resources:
-- name: resource-code
-  type: git
-  source:
-    uri: https://github.com/bff-trainning/web.git
-    branch: master
+  - name: resource-code
+    type: git
+    source:
+      uri: https://github.com/bff-trainning/web.git
+      branch: master
 
 jobs:
-- name: bff-web-test
-  public: true
-  plan:
-  - get: resource-code
-    trigger: true
-  - task: test
-    config:
-      platform: linux
-      image_resource:
-        type: docker-image
-        source: {repository: node:12}
-      inputs: 
-        - name: resource-code
-      run:
-        path: resource-code/scripts/test.sh
+  - name: bff-web-test
+    public: true
+    plan:
+      - get: resource-code
+        trigger: true
+      - task: test
+        config:
+          platform: linux
+          image_resource:
+            type: docker-image
+            source: { repository: node:12 }
+          inputs:
+            - name: resource-code
+          run:
+            path: resource-code/scripts/test.sh
