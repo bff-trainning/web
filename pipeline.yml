@@ -11,5 +11,6 @@ jobs:
     public: true
     plan:
       - get: resource-code
+        trigger: true
       - task: test
-        file: resource-code/tasks/hello.yml
+        file: resource-code/tasks/test.yml
