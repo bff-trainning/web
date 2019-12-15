@@ -1,2 +1,2 @@
 #!/bin/sh
-node -v
+uname -a
