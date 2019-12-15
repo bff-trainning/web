@@ -1,0 +1,15 @@
+---
+resources:
+  - name: resource-code
+    type: git
+    source:
+      uri: https://github.com/bff-trainning/web.git
+      branch: master
+
+jobs:
+  - name: web-test
+    public: true
+    plan:
+      - get: resource-code
+      - task: test
+        file: resource-code/tasks/hello.yml
