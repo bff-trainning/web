@@ -1,2 +1,2 @@
 #!/bin/sh
-uname -a
+echo helloworld
