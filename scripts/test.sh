@@ -1,3 +1,2 @@
-echo $(pwd)
-cd resource-code/
-npm run test
+#!/bin/sh
+node -v
