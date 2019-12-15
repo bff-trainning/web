@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1576134296509" clover="3.2.0">
-  <project timestamp="1576134296509" name="All files">
-    <metrics statements="16" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1" elements="20" coveredelements="9" complexity="0" loc="16" ncloc="16" packages="1" files="2" classes="2"/>
+<coverage generated="1576415992887" clover="3.2.0">
+  <project timestamp="1576415992887" name="All files">
+    <metrics statements="17" coveredstatements="9" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="1" elements="23" coveredelements="11" complexity="0" loc="17" ncloc="17" packages="1" files="2" classes="2"/>
     <file name="configuration.ts" path="/Users/iven/Documents/bmw/trainning/web/src/configuration.ts">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="0" coveredmethods="0"/>
       <line num="1" count="1" type="stmt"/>
-      <line num="8" count="1" type="stmt"/>
-      <line num="10" count="1" type="stmt"/>
+      <line num="8" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="9" count="1" type="stmt"/>
+      <line num="12" count="1" type="stmt"/>
     </file>
     <file name="service.ts" path="/Users/iven/Documents/bmw/trainning/web/src/service.ts">
       <metrics statements="13" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
@@ -15,14 +16,14 @@
       <line num="5" count="1" type="stmt"/>
       <line num="8" count="0" type="stmt"/>
       <line num="12" count="0" type="stmt"/>
-      <line num="14" count="0" type="stmt"/>
-      <line num="16" count="0" type="stmt"/>
+      <line num="13" count="0" type="stmt"/>
+      <line num="15" count="0" type="stmt"/>
+      <line num="20" count="0" type="stmt"/>
+      <line num="21" count="0" type="stmt"/>
       <line num="22" count="0" type="stmt"/>
-      <line num="23" count="0" type="stmt"/>
-      <line num="24" count="0" type="stmt"/>
-      <line num="26" count="0" type="stmt"/>
+      <line num="27" count="0" type="stmt"/>
+      <line num="32" count="1" type="stmt"/>
       <line num="33" count="1" type="stmt"/>
-      <line num="34" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>
