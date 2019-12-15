@@ -19,6 +19,6 @@ jobs:
         type: docker-image
         source: {repository: node:12}
       inputs: 
-      - name: resource-code
+        - name: resource-code
       run:
         path: resource-code/scripts/test.sh
