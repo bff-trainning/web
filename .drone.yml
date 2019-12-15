@@ -21,6 +21,15 @@ steps:
   - npm run test:cov
   - npm run test:e2e
 
+
+- name: coverage
+  image: plugins/codecov
+  settings:
+    token: d5ad32af-ef99-4968-9679-8ec6701699e2
+    files:
+     - coverage/*.xml
+
+
 - name: code-analysis
   image: aosapps/drone-sonar-plugin
   settings:
