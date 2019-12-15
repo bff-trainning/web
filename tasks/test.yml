@@ -5,4 +5,5 @@ image_resource:
 inputs:
 - name: resource-code
 run:
-  path: ./resource-code/scripts/test.sh
+  path: cat
+  args: [resource-code/scripts/test.sh]
