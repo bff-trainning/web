@@ -5,4 +5,4 @@ image_resource:
 inputs:
 - name: resource-code
 run:
-  path: ./resource-code/scripts/test.sh
+  path: ./resource-code/scripts/npmtest.sh
