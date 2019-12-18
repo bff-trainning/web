@@ -20,7 +20,7 @@ const app = new Koa();
 const router = new Router();
 const service = new Service();
 router.get("/", async ctx => {
-  ctx.body = "hello";
+  ctx.body = "5";
 });
 
 router.get("/api/news", async ctx => {
