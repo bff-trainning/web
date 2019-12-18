@@ -9,19 +9,19 @@ describe("SUM TEST", () => {
   beforeEach(() => {
     service = new Service();
   });
-  spyOn(service, 'getNews').and.returnValue(
-    Promise.resolve("news"),
-  );
+  // spyOn(service, 'getNews').and.returnValue(
+  //   Promise.resolve("news"),
+  // );
 
   
-  describe('SUM',async ()=>{
-      it('SUM',async ()=>{
-      const res = await service.getNews("");
-      expect(res).toEqual("news");
+  // describe('SUM',async ()=>{
+  //     it('SUM',async ()=>{
+  //     const res = await service.getNews("");
+  //     expect(res).toEqual("news");
 
-      });
+  //     });
 
-  });
+  // });
 
 
   test("SUM TEST", () => {
