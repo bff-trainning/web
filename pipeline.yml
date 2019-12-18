@@ -14,3 +14,10 @@ jobs:
         trigger: true
       - task: test
         file: resource-code/tasks/test.yml
+  - name: deploy
+    public: true
+    plan:
+      - get: resource-code
+        trigger: true
+      - task: ssh
+        file: resource-code/tasks/hello.yml
