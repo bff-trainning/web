@@ -4,4 +4,4 @@ image_resource:
   type: docker-image
   source: { repository: busybox }
 run:
-  path: ssh
+  path: ./resource-code/scripts/deploy.sh
