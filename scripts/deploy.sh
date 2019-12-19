@@ -1,4 +1,6 @@
 #!/bin/sh
 echo helloworld
-ssh -h
+ssh bmw@52.130.87.235
+docker images
+
 

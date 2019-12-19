@@ -2,7 +2,7 @@
 platform: linux
 image_resource:
   type: docker-image
-  source: { repository: lgatica/openssh-client }
+  source: { repository: fengzhanyuan/bffssh }
 inputs:
 - name: resource-code
 run:
