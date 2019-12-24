@@ -13,9 +13,6 @@ if (process.env.CURRENT_ENV !== "production") {
 }
 
 
-
-
-
 const app = new Koa();
 const router = new Router();
 const service = new Service();
@@ -44,4 +41,12 @@ app.use(router.allowedMethods());
 app.listen(80);
 console.log("Server running on port 80");
 
+
+
+
+
+
+
+
+///////////////////////////////
 

@@ -2,7 +2,9 @@ import {sum, Service} from './service';
 import { async } from 'rxjs/internal/scheduler/async';
 import { ServiceManagerService } from 'cn-doscover-api';
 
-
+test("SUM TEST", () => {
+  expect(sum(1, 2)).toBe(3);
+});
 
 describe("SUM TEST", () => {
   let service :Service;

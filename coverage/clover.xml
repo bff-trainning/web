@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1576569898444" clover="3.2.0">
-  <project timestamp="1576569898444" name="All files">
-    <metrics statements="17" coveredstatements="9" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="1" elements="23" coveredelements="11" complexity="0" loc="17" ncloc="17" packages="1" files="2" classes="2"/>
+<coverage generated="1577079151300" clover="3.2.0">
+  <project timestamp="1577079151300" name="All files">
+    <metrics statements="17" coveredstatements="10" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="2" elements="23" coveredelements="13" complexity="0" loc="17" ncloc="17" packages="1" files="2" classes="2"/>
     <file name="configuration.ts" path="/Users/iven/Documents/bmw/trainning/web/src/configuration.ts">
       <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="0" coveredmethods="0"/>
       <line num="1" count="1" type="stmt"/>
@@ -10,7 +10,7 @@
       <line num="12" count="1" type="stmt"/>
     </file>
     <file name="service.ts" path="/Users/iven/Documents/bmw/trainning/web/src/service.ts">
-      <metrics statements="13" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
+      <metrics statements="13" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
       <line num="3" count="1" type="stmt"/>
       <line num="4" count="1" type="stmt"/>
       <line num="5" count="1" type="stmt"/>
@@ -23,7 +23,7 @@
       <line num="22" count="0" type="stmt"/>
       <line num="27" count="0" type="stmt"/>
       <line num="32" count="1" type="stmt"/>
-      <line num="33" count="0" type="stmt"/>
+      <line num="33" count="2" type="stmt"/>
     </file>
   </project>
 </coverage>
